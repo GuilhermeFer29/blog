@@ -46,13 +46,13 @@ $checkedImage = function(bool $v) use ($checked) {
 <?php foreach ($projetos as $projeto): ?>
     <div class="bg-slate-600 rounded-lg p-3 flex intems-center space-x-3 ">
         <div class="w-1/5 flex intems-center justify-middle ">
-            <img class="h-42 rounded-md hover:animate-pulse" src="<?= $projeto['img'] ?>" alt="projeto">
+            <img class="h-42 rounded-md" src="<?= $projeto['img'] ?>" alt="projeto">
         </div>
         <div class="w-4/5 space-y-3 ">
 
             <div class="flex gap-3 justify-between ">
                 <h3 class=" flex gap-1 font-semibold text-xl">
-                    <img class="h-5 self-center" src="<?= $checkedImage($projeto['finalizado']) ?>" alt="<?= $projeto['finalizado'] ? 'finalizado' : 'em desenvolvimento' ?>">
+                    <img class="h-5 self-center  hover:animate-pulse" src="<?= $checkedImage($projeto['finalizado']) ?>" alt="<?= $projeto['finalizado'] ? 'finalizado' : 'em desenvolvimento' ?>">
 
                     <?= $projeto['nome'] ?>   
                     
